@@ -1,8 +1,10 @@
-def add_time(initial_hour: str, difference: str, initial_day: str = ""):
-    hour_difference = int(difference.split(":")[0])
-    minute_difference = int(difference.split(":")[1])
+# This entrypoint file to be used in development. Start by reading README.md
+from time_calculator import add_time
+from unittest import main
 
-    days_passed = hour_difference // 24
 
-    hour_initial = int(initial_hour.split(":")[0])
-    minute_initial = int(initial_hour.split(":")[1])
+print(add_time("11:06 PM", "2:02"))
+
+
+# Run unit tests automatically
+main(module='test_module', exit=False)
